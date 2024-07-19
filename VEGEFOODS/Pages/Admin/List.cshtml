@@ -1,0 +1,44 @@
+﻿@page
+
+@{
+    Layout = "/Pages/Admin/Shared/_Layout.cshtml";
+    ViewData["Title"] = "List";
+}
+
+<div class="container-fluid">
+    <div class="card w-100">
+        <div class="card-header">
+            <div class="d-sm-flex d-block align-items-center justify-content-between">
+                <div class="mb-sm-0">
+                    <h3 class="card-title fw-semibold">Product <small class="text-muted">list</small></h3>
+                </div>
+                <div>
+                    <a href="/edit.html" class="btn btn-primary"><i class="ti ti-plus"></i> Add</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered table-hover">
+                <thead class="table-primary">
+                    <tr>
+                        <th style="width: 20px">#</th>
+                        <th>Name</th>
+                        <th>Unit</th>
+                        <th>Price</th>
+                        <th style="width: 20px"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                <td class="text-center">1</td>
+                <td>Mango</td>
+                <td>Pcs</td>
+                <td class="text-end">20,000</td>
+                <td class="text-nowrap">
+                    <a href="/Admin/Edit"><i class="ti ti-edit"></i></a>
+                    <a href="#" class="link-danger"><i class="ti ti-trash"></i></a>
+                </td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

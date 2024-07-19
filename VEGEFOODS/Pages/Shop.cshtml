@@ -1,0 +1,132 @@
+﻿@page
+@model ShopModel
+@{
+    Layout = "Shared/_Layout.cshtml";
+
+}
+<style>
+    .product {
+        border: 1px solid #DDDDDD;
+    }
+
+    .img-prod img {
+        max-width: 100%;
+        height: 260px;
+    }
+
+</style>
+<div class="hero-wrap hero-bread" style="background-image: url('@Url.Content("~/Home/images/bg_1.jpg")');">
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center">
+                <h1 class="mb-0 bread">Products</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 mb-5 text-center">
+                <ul class="product-category">
+                    <li><a href="#" class="category-link active" data-tab="tab-0">All</a></li>
+                    @foreach (var cat in Model.Categories)
+                    {
+                        <li><a href="#" class="category-link" data-tab="tab-@cat.CAT_ID">@cat.Name</a></li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="row product-list" id="tab-0">
+            @foreach (var product in Model.NewProducts)
+            {
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="product">
+                        <a href="/ProductDetail/@product.PRO_ID" class="img-prod">
+                            <img class="img-fluid" src="~/Data/Products/@product.Avatar" alt="Colorlib Template" />
+                           @*  <span class="status">- @string.Format("{0:N0}", product.DiscountPrice)</span> *@
+                            <div class="overlay"></div>
+                        </a>
+                        <div class="text py-3 pb-4 px-3 text-center">
+                            <h3><a href="#">@product.Name</a></h3>
+                            <div class="d-flex">
+                                <div class="pricing">
+                                    <p class="price">
+                                        <span class="price-sale">@string.Format("{0:N0}", product.Price - product.DiscountPrice) / @product.Unit</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="bottom-area d-flex px-3">
+                                <div class="m-auto d-flex">
+                                    <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                                        <span><i class="ion-ios-cart"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        @foreach (var cat in Model.Categories)
+        {
+            <div class="row product-list" id="tab-@cat.CAT_ID" style="display: none;">
+                @foreach (var product in cat.Products!)
+                {
+                    <div class="col-md-6 col-lg-3 ftco-animate">
+                        <div class="product">
+                            <a href="/ProductDetail/@product.PRO_ID" class="img-prod">
+                                <img class="img-fluid" src="~/Data/Products/@product.Avatar" alt="Colorlib Template" />
+                                <span class="status">- @string.Format("{0:N0}", product.DiscountPrice)</span>
+                                <div class="overlay"></div>
+                            </a>
+                            <div class="text py-3 pb-4 px-3 text-center">
+                                <h3><a href="#">@product.Name</a></h3>
+                                <div class="d-flex">
+                                    <div class="pricing">
+                                        <p class="price">
+                                            <span class="price-sale">@string.Format("{0:N0}", product.Price - product.DiscountPrice) / @product.Unit</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="bottom-area d-flex px-3">
+                                    <div class="m-auto d-flex">
+                                        <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                                            <span><i class="ion-ios-cart"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.category-link').on('click', function (e) {
+            e.preventDefault();
+
+            // Remove active class from all links
+            $('.category-link').removeClass('active');
+
+            // Add active class to the clicked link
+            $(this).addClass('active');
+
+            // Get the tab id to show
+            var tabId = $(this).data('tab');
+
+            // Hide all product lists
+            $('.product-list').hide();
+
+            // Show the selected product list
+            $('#' + tabId).show();
+        });
+    });
+</script>
+

@@ -1,0 +1,100 @@
+﻿@page
+@model VEGEFOODS.Pages.Admin.Banner.ListModel
+@{
+    Layout = "/Pages/Admin/Shared/_Layout.cshtml";
+    ViewData["Title"] = "List";
+}
+
+<div class="card w-100">
+    <div class="card-header">
+        <div class="d-sm-flex d-block align-items-center justify-content-between">
+            <div class="mb-sm-0">
+                <h3 class="card-title fw-semibold">Banner <small class="text-muted">list</small></h3>
+            </div>
+            <div>
+                <a href="~/Admin/Banner/Edit" class="btn btn-primary"><i class="ti ti-plus"></i> Thêm mới</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <table id="tbl" class="table table-bordered table-hover">
+            <thead class="table-primary">
+                <tr>
+                    <th style="width: 80px">#</th>
+                    <th>Tiêu đề</th>             
+                    @* <th style="width: 80px">URL</th> *@
+                    <th style="width: 80px">Hình ảnh</th>
+                    <th style="width: 80px">Vị trí</th>
+                    <th style="width: 20px"></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                
+                @foreach (var row in Model.data)
+                {
+                    <tr data-id="@(row.BAN_ID)">
+                        <td class="text-center"></td>
+                        <td>@row.Title</td> 
+                       @*  <td>@row.Url</td> *@
+                        <td>
+                            <img src="@Url.Content($"~/Data/Banners/{row.Image}")" alt="Image for @row.Title" style="max-width: 100px; max-height: 100px;" onerror="this.onerror=null; this.src='/images/default.jpg';" />
+                        </td>
+                        <td class="text-end">@row.DisplayOrder</td>
+                        <td class="text-nowrap">
+                            <a href="~/Admin/Banner/Edit/@(row.BAN_ID)"><i class="ti ti-edit"></i></a>
+                            <a href="#" data-group="grpDelete" class="link-danger"><i class="ti ti-trash"></i></a>
+                        </td>
+                    </tr>
+
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+@section Footer {
+    <form id="frmDelete" method="post">
+        <input type="hidden" id="hidId" name="Id" value="" />
+    </form>
+}
+
+@section Scripts {
+    <script>
+        $(document).ready(() => {
+            $('#tbl').DataTable({
+                columnDefs: [
+                    { orderable: false, targets: [0, 4] },
+                    { width: '10px', targets: [0, 4] },
+                ],
+                order: [[3, 'asc']],
+                rowCallback: function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+                    $('td:eq(0)', nRow).html(iDisplayIndexFull + 1);
+                }
+            });
+            $('a[data-group="grpDelete"]').click(function (e) {
+                e.preventDefault();
+                var id = $(this).closest('tr').data('id');
+                $.confirm({
+                    icon:'fa-solid fa-question',
+                    title: 'Confirm!',
+                    content: 'Bạn chắc muốn xóa dòng này!',
+                    type:'blue',
+                    typeAnimated:true,
+                    buttons: {
+                        NO: function () { },
+                        YES: {
+                            btnClass: 'btn-blue',
+                            action: function () {
+                                $('#hidId').val(id);
+                                $('#frmDelete').submit();
+                            }
+                        },
+                    }
+                })
+                
+               
+            });
+        });
+    </script>
+}

@@ -1,0 +1,179 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = VEGEFOODS
+build_property.RootNamespace = VEGEFOODS
+build_property.ProjectDir = C:\HK4\BackEnd\VEGEFOODS\VEGEFOODS (1)\VEGEFOODS\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\HK4\BackEnd\VEGEFOODS\VEGEFOODS (1)\VEGEFOODS
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Areas/Identity/Pages/Account/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Admin/Banner/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQmFubmVyXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Admin/Banner/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQmFubmVyXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Admin/Category/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Admin/Category/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2F0ZWdvcnlcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Admin/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Admin/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Admin/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Admin/LogOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTG9nT3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Admin/Product/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUHJvZHVjdFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Admin/Product/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUHJvZHVjdFxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/CartDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hlY2tvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/OrderDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/ProductDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Shop.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Wishlist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2lzaGxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Admin/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-lkytk2u6wn
+
+[C:/HK4/BackEnd/VEGEFOODS/VEGEFOODS (1)/VEGEFOODS/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-kubjxhoq4b

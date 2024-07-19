@@ -1,0 +1,39 @@
+﻿@page "/Admin/Category/Edit/{id:int?}"
+@model VEGEFOODS.Pages.Admin.Category.EditModel
+@{
+    Layout = "/Pages/Admin/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Edit";
+}
+
+<div class="card w-100">
+    <div class="card-header">
+        <div class="d-sm-flex d-block align-items-center justify-content-between">
+            <div class="mb-sm-0">
+                <h3 class="card-title fw-semibold">Danh mục <small class="text-muted">@(Model.Id.HasValue ? "Chỉnh sửa" : "Thêm mới")</small></h3>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            <div class="row mb-3">
+                <label asp-for="@(Model.Category!.Name)" for="txtname" class="col-sm-2 col-form-label">Tên danh mục</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" asp-for="@(Model.Category!.Name)" />
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="txtDisplayOrder" class="col-sm-2 col-form-label">Vị trí hiển thị</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="txtDisplayOrder" name="Category.DisplayOrder" value="@(Model.Category?.DisplayOrder)" />
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm offset-sm-2">
+                    <button type="submit" class="btn btn-primary">Lưu</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

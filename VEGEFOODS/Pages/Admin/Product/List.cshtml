@@ -1,0 +1,100 @@
+﻿@page
+@model VEGEFOODS.Pages.Admin.Product.ListModel
+@{
+    Layout = "/Pages/Admin/Shared/_Layout.cshtml";
+    ViewData["Title"] = "List";
+}
+
+<div class="card w-100">
+    <div class="card-header">
+        <div class="d-sm-flex d-block align-items-center justify-content-between">
+            <div class="mb-sm-0">
+                <h3 class="card-title fw-semibold">Product <small class="text-muted">list</small></h3>
+            </div>
+            <div>
+                <a href="~/Admin/Product/Edit" class="btn btn-primary"><i class="ti ti-plus"></i> Thêm mới</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <table id="tbl" class="table table-bordered table-hover">
+            <thead class="table-primary">
+                <tr>
+                    <th style="width: 80px">#</th>
+                    <th>Tên</th>
+                    <th style="width: 60px">Giá</th>
+                    <th style="width: 80px">Giá giảm</th>
+                    <th style="width: 30px">Đơn vị</th>
+                    <th style="width: auto" >Danh mục</th>
+                    <th style="width: 20px"></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                
+                @foreach (var row in Model.data)
+                {
+                    <tr data-id="@(row.PRO_ID)">
+                        <td class="text-center"></td>
+                        <td>@row.Name</td>
+                        <td class="text-end">@string.Format("{0:N0} đ", row.Price)</td>
+                        <td class="text-end">@string.Format("{0:N0} đ", row.DiscountPrice)</td>
+                        <td class="text-end">@row.Unit</td>
+                        <td class="text-end">@row.Category?.Name</td>
+                        <td class="text-nowrap">
+                            <a href="~/Admin/Product/Edit/@(row.PRO_ID)"><i class="ti ti-edit"></i></a>
+                            <a href="#" data-group="grpDelete" class="link-danger"><i class="ti ti-trash"></i></a>
+                        </td>
+                    </tr>
+
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+@section Footer {
+    <form id="frmDelete" method="post">
+        <input type="hidden" id="hidId" name="Id" value="" />
+    </form>
+}
+
+@section Scripts {
+    <script>
+        $(document).ready(() => {
+            $('#tbl').DataTable({
+                columnDefs: [
+                    { orderable: false, targets: [0, 5] },
+                    { width: '10px', targets: [0, 5] },
+                ],
+                order: [[1, 'asc']],
+                rowCallback: function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+                    $('td:eq(0)', nRow).html(iDisplayIndexFull + 1);
+                }
+            });
+            $('a[data-group="grpDelete"]').click(function (e) {
+                e.preventDefault();
+                var id = $(this).closest('tr').data('id');
+                $.confirm({
+                    icon:'fa-solid fa-question',
+                    title: 'Confirm!',
+                    content: 'Bạn chắc muốn xóa dòng này!',
+                    type:'blue',
+                    typeAnimated:true,
+                    buttons: {
+                        NO: function () { },
+                        YES: {
+                            btnClass: 'btn-blue',
+                            action: function () {
+                                $('#hidId').val(id);
+                                $('#frmDelete').submit();
+                            }
+                        },
+                    }
+                })
+                
+               
+            });
+        });
+    </script>
+}

@@ -1,0 +1,280 @@
+﻿@page
+@model IndexModel
+@{
+    Layout = "Shared/_Layout.cshtml";
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+    .product {
+        border: 1px solid #DDDDDD;
+    }
+
+    .img-prod img {
+        max-width: 100%;
+        height: 260px;
+    }
+
+</style>
+
+<section id="home-section" class="hero">
+    <div class="home-slider owl-carousel">
+        <!-- Slider Item 1 -->
+        @foreach (var banner in Model.Bannerss)
+        {
+            <div class="slider-item">
+                <img src="~/Data/Banners/@banner.Image" alt="Banner Image" class="img-fluid">
+            </div>
+        }
+    </div>
+</section>
+
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row no-gutters ftco-services">
+            <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services mb-md-0 mb-4">
+                    <div class="icon bg-color-1 active d-flex justify-content-center align-items-center mb-2">
+                        <span class="flaticon-shipped"></span>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="heading">Miễn phí giao hàng</h3>
+                        <span>Cho đơn từ 100.000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services mb-md-0 mb-4">
+                    <div class="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
+                        <span class="flaticon-diet"></span>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="heading">Luôn tươi mới</h3>
+                        <span>Sản phẩm luôn tươi</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services mb-md-0 mb-4">
+                    <div class="icon bg-color-3 d-flex justify-content-center align-items-center mb-2">
+                        <span class="flaticon-award"></span>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="heading">Chất lượng cao</h3>
+                        <span>Sản phẩm chất lượng</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services mb-md-0 mb-4">
+                    <div class="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
+                        <span class="flaticon-customer-service"></span>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="heading">Hỗ trợ</h3>
+                        <span>Hỗ trợ 24/7</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center mb-3 pb-3">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <h2 class="mb-4">Sản phẩm mới</h2>
+                <p><a href="/shop" class="btn btn-primary">Đến Shop</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            @foreach (var product in Model.NewProducts)
+            {
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="product">
+                        <a href="/ProductDetail/@product.PRO_ID" class="img-prod">
+                            <img class="img-fluid"
+                                 src="~/Data/Products/@product.Avatar"
+                                 alt="Colorlib Template" />
+                            @if(product.DiscountPrice > 0)
+                            {
+                                <span class="status">- @string.Format("{0:N0}", product.DiscountPrice)</span>
+                            }
+                            <div class="overlay"></div>
+                        </a>
+                        <div class="text py-3 pb-4 px-3 text-center">
+                            <h3><a href="#">@product.Name</a></h3>
+                            <div class="d-flex">
+                                <div class="pricing">
+                                    <p class="price">
+                                        @if (product.DiscountPrice > 0)
+                                        {
+                                            <span class="mr-2 price-dc">@string.Format("{0:N0}", product.Price)</span>
+                                        }
+                                        
+                                        <span class="price-sale">@string.Format("{0:N0}", product.Price - product.DiscountPrice) / @product.Unit</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="bottom-area d-flex px-3">
+                                <div class="m-auto d-flex">
+                                    <a href="#"
+                                       class="buy-now d-flex justify-content-center align-items-center mx-1">
+                                        <span><i class="ion-ios-cart"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section img"
+         style="background-image: url('@Url.Content("~/Home/images/bg_3.jpg")');">
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
+                <span class="subheading">Giá tốt cho bạn</span>
+                <h2 class="mb-4">Deal of the day</h2>
+                <p>
+                    Far far away, behind the word mountains, far from the countries
+                    Vokalia and Consonantia
+                </p>
+                <h3><a href="#">Spinach</a></h3>
+                <span class="price">$10 <a href="#">now $5 only</a></span>
+                <div id="timer" class="d-flex mt-5">
+                    <div class="time" id="days"></div>
+                    <div class="time pl-3" id="hours"></div>
+                    <div class="time pl-3" id="minutes"></div>
+                    <div class="time pl-3" id="seconds"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section testimony-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+                <h2 class="mb-4">Đánh giá của khách hàng</h2>
+                
+            </div>
+        </div>
+        <div class="row ftco-animate">
+            <div class="col-md-12">
+                <div class="carousel-testimony owl-carousel">
+                    <div class="item">
+                        <div class="testimony-wrap p-4 pb-5">
+                            <div class="user-img mb-5"
+                                 style="background-image: url('@Url.Content("~/Home/images/person_1.jpg")')">
+                                <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                </span>
+                            </div>
+                            <div class="text text-center">
+                                <p class="mb-5 pl-4 line">
+                                    Far far away, behind the word mountains, far from the
+                                    countries Vokalia and Consonantia, there live the blind
+                                    texts.
+                                </p>
+                                <p class="name">Garreth Smith</p>
+                                <span class="position">Marketing Manager</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap p-4 pb-5">
+                            <div class="user-img mb-5"
+                                 style="background-image: url('@Url.Content("~/Home/images/person_2.jpg")')">
+                                <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                </span>
+                            </div>
+                            <div class="text text-center">
+                                <p class="mb-5 pl-4 line">
+                                    Far far away, behind the word mountains, far from the
+                                    countries Vokalia and Consonantia, there live the blind
+                                    texts.
+                                </p>
+                                <p class="name">Garreth Smith</p>
+                                <span class="position">Interface Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap p-4 pb-5">
+                            <div class="user-img mb-5"
+                                 style="background-image: url('@Url.Content("~/Home/images/person_3.jpg")')">
+                                <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                </span>
+                            </div>
+                            <div class="text text-center">
+                                <p class="mb-5 pl-4 line">
+                                    Far far away, behind the word mountains, far from the
+                                    countries Vokalia and Consonantia, there live the blind
+                                    texts.
+                                </p>
+                                <p class="name">Garreth Smith</p>
+                                <span class="position">UI Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap p-4 pb-5">
+                            <div class="user-img mb-5"
+                                 style="background-image: url('@Url.Content("~/Home/images/person_4.jpg")')">
+                                <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                </span>
+                            </div>
+                            <div class="text text-center">
+                                <p class="mb-5 pl-4 line">
+                                    Far far away, behind the word mountains, far from the
+                                    countries Vokalia and Consonantia, there live the blind
+                                    texts.
+                                </p>
+                                <p class="name">Garreth Smith</p>
+                                <span class="position">Web Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap p-4 pb-5">
+                            <div class="user-img mb-5"
+                                 style="background-image: url('@Url.Content("~/Home/images/person_1.jpg")')">
+                                <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                </span>
+                            </div>
+                            <div class="text text-center">
+                                <p class="mb-5 pl-4 line">
+                                    Rau củ quá tươi ngon, sạch sẽ. Giá cả hợp lý.
+                                </p>
+                                <p class="name">Gia Minh</p>
+                                <span class="position">CEO Apple</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr />
+
+
+

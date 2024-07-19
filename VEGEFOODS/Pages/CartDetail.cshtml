@@ -1,0 +1,36 @@
+﻿@page
+@model VEGEFOODS.Pages.CartDetailModel
+@{
+	Layout = "Shared/_Layout.cshtml";
+}
+<div class="hero-wrap hero-bread" style="background-image: url('@Url.Content("~/Home/images/bg_1.jpg")');">
+	<div class="container">
+		<div class="row no-gutters slider-text align-items-center justify-content-center">
+			<div class="col-md-9 ftco-animate text-center">
+				<p class="breadcrumbs"><span class="mr-2"><a href="/index">Home</a></span> <span>Cart</span></p>
+				<h1 class="mb-0 bread">Chi tiết Đơn hàng</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="card-body">
+    <table class="table table-bordered table-hover">
+        <thead class="table-primary">
+            <tr>
+                <th style="width: 20px">#</th>
+                <th>Mã hóa đơn</th>
+                <th>Tình trạng</th>
+                <th>Ngày đặt hàng</th>
+                <th>Xem đơn</th>
+            </tr>
+        </thead>
+        <tbody>
+        <td class="text-center">1</td>
+        <td>Mango</td>
+        <td>Pcs</td>
+        <td class="text-end">20,000</td>
+        <td class="text-end"><a href="/orderdetail">Xem đơn</a></td>
+        </tbody>
+    </table>
+</div>

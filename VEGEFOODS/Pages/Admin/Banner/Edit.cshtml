@@ -1,0 +1,60 @@
+﻿@page "/Admin/Banner/Edit/{id:int?}"
+@model VEGEFOODS.Pages.Admin.Banner.EditModel
+@{
+    Layout = "/Pages/Admin/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Edit";
+}
+<style>
+    img{
+        width:50%;
+        height:70%;
+    }
+</style>
+
+<div class="card w-100">
+    <div class="card-header">
+        <div class="d-sm-flex d-block align-items-center justify-content-between">
+            <div class="mb-sm-0">
+                <h3 class="card-title fw-semibold">Banner <small class="text-muted">@(Model.Id.HasValue ? "Chỉnh sửa" : "Thêm mới")</small></h3>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <form method="post" enctype="multipart/form-data">
+            <div class="row mb-3">
+                <label asp-for="@(Model.Banner!.Title)" for="txtname" class="col-sm-2 col-form-label">Tên Banner</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" asp-for="@(Model.Banner!.Title)" />
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="txtDisplayOrder" class="col-sm-2 col-form-label">Vị trí hiển thị</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="txtDisplayOrder" name="Banner.DisplayOrder" value="@(Model.Banner?.DisplayOrder)" />
+                </div>
+            </div>
+            
+
+            <div class="row mb-3">
+                <label asp-for="@(Model.Avatar)" for="txtname" class="col-sm-2 col-form-label">Banner Image</label>
+                <div class="col-sm-10">
+                    <input type="file" accept="image/*" class="form-control" asp-for="@(Model.Avatar)" />
+                </div>
+            </div>
+            @if (!String.IsNullOrEmpty(Model.Banner?.Image))
+            {
+                <div class="row mb-3">
+                    <div class="offset-sm-2 col-sm">
+                        <img src="~/Data/Banners/@Model.Banner?.Image" alt="" class="img-pluid"/>
+                    </div>
+                </div>
+            }
+           
+            <div class="row">
+                <div class="col-sm offset-sm-2">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
